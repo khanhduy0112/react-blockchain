@@ -1,7 +1,6 @@
 {
   "homepage": "http://khanhduy0112.github.io/react-blockchain",
-
-  "name": "react-blockchain",
+  "name": "react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
