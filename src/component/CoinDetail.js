@@ -1,13 +1,13 @@
 import React from 'react'
-import { useParams } from 'react-router'
+import { useParams } from 'react-router-dom'
 
 function CoinDetail() {
 
-    const params = useParams();
+    const { coinName } = useParams();
 
     return (
         <div>
-            <h1>Coin Details</h1>
+            <h1>{coinName}</h1>
         </div>
     )
 }
