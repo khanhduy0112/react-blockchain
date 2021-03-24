@@ -37,12 +37,10 @@ function CustomAppBar({ setLanguage }) {
                     <select onChange={(e) => { setLanguage(e.target.value) }}>
                         <option value="VN">
                             US
-            </option>
+                        </option>
                         <option value="CN">VN</option>
-
                     </select>
                 </FormControl>
-                <img src="/public/vn-flag.png" alt="" />
             </Toolbar>
         </AppBar>
     )
