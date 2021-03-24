@@ -20,15 +20,6 @@ const useStyles = makeStyles((theme) => ({
     paperContainer: {
         height: '100vh',
         overflowY: 'scroll'
-        // display: 'flex',
-        // flexWrap: 'wrap',
-        // '& > *': {
-        //     margin: theme.spacing(1),
-        //     width: theme.spacing(30),
-
-        //     // height: theme.spacing(16),
-        // },
-
     },
     title: {
         fontSize: '25px',
@@ -64,9 +55,8 @@ function Sidebar({ isLoading, coins, coinNames }) {
     const [coinName, setCoinName] = useState("bitcoin");
     const [transactionsData, setTransactionsData] = useState([]);
     const [isFetching, setIsFetching] = useState(true);
-
-    const [rows, setRows] = useState([])
-    const [cols, setCols] = useState([])
+    const [rows, setRows] = useState([]);
+    const [cols, setCols] = useState([]);
 
     useEffect(() => {
         const fetch = async () => {
@@ -178,7 +168,6 @@ function Sidebar({ isLoading, coins, coinNames }) {
                     )
                 }
             </div>
-
         </div>
     )
 }

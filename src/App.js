@@ -47,6 +47,7 @@ function App() {
   }, [])
   return (
     <div className={classes.appContainer}>
+      <h1>Test</h1>
       <CustomAppBar setLanguage={setLanguage} />
       <main className={classes.root}>
         <MainSection language={language} coins={coins} coinNames={coinNames} isLoading={isLoading} className={classes.mainSection} />
