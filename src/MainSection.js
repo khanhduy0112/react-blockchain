@@ -116,7 +116,7 @@ function MainSection({ isLoading, coins, coinNames, language }) {
                 <div>
 
                     <h3
-                        style={{ textTransform: 'uppercase' }}
+                        style={{ textTransform: 'uppercase', fontSize: '18px', textAlign: 'center', textDecoration: 'underline', letterSpacing: '2px', margin: '1rem 0' }}
                     >
                         {coinName} Biggest Transactions in  {month} - {year}
                     </h3>

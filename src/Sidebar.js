@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { Paper, Typography } from '@material-ui/core';
 import axios from 'axios';
 import CountUp from 'react-countup';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -22,9 +23,10 @@ const useStyles = makeStyles((theme) => ({
         overflowY: 'scroll'
     },
     title: {
-        fontSize: '25px',
+        fontSize: '20px',
         fontWeight: '300',
-        color: '#00C6B5'
+        color: '#00C6B5',
+        textTransform: 'uppercase'
     },
     green: {
         fontSize: '15px',
@@ -103,16 +105,17 @@ function Sidebar({ isLoading, coins, coinNames }) {
                     !isLoading && (
                         coinNames.map((name, index) => {
                             const logoSrc = `https://loutre.blockchair.io/images/new/logos/${name}.svg`
+                            const link = `/coins/${name}`;
                             if (name !== "cross-chain") {
                                 return (
                                     <Paper className={classes.paper} variant="outlined" elevation={0} key={index} >
                                         <Typography className={classes.title} variant="h1">
-                                            <img className={classes.coinLogo} src={logoSrc} alt="" />
-
-                                            {name}
+                                            <Link to={link}>
+                                                <img className={classes.coinLogo} src={logoSrc} alt="" />
+                                                {name}
+                                            </Link>
                                         </Typography>
                                         <div className={classes.paperNumber}>
-
                                             <div >
                                                 <span className={classes.price}>
                                                     Block :

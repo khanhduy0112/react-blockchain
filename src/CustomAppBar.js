@@ -17,9 +17,14 @@ const useStyles = makeStyles((theme) => ({
     menuButton: {
         marginRight: theme.spacing(2),
     },
-    title: {
+
+    textLogo: {
+        // color: '#be2edd',
         flexGrow: 1,
-    },
+        letterSpacing: '2px',
+        fontWeight: '600'
+
+    }
 }));
 function CustomAppBar({ setLanguage }) {
     const classes = useStyles();
@@ -29,7 +34,7 @@ function CustomAppBar({ setLanguage }) {
                 <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                     <MenuIcon />
                 </IconButton>
-                <Typography align="center" variant="h4" className={classes.title}>
+                <Typography align="center" className={classes.textLogo} variant="h5" >
                     BLOCKCHAIN COINSTATS
                 </Typography>
                 {/* <Button color="inherit">Login</Button> */}

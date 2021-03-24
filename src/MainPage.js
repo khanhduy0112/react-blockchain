@@ -6,7 +6,6 @@ import { makeStyles } from '@material-ui/core';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
 import { fetchCoinStats } from './service/fetchData'
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
     appContainer: {
         background: '#fff'
