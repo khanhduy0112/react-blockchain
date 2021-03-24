@@ -30,8 +30,8 @@ function CustomAppBar({ setLanguage }) {
                     <MenuIcon />
                 </IconButton>
                 <Typography align="center" variant="h4" className={classes.title}>
-                    COINSTATS
-          </Typography>
+                    BLOCKCHAIN COINSTATS
+                </Typography>
                 {/* <Button color="inherit">Login</Button> */}
                 <FormControl>
                     <select onChange={(e) => { setLanguage(e.target.value) }}>

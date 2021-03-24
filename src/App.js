@@ -7,7 +7,6 @@ import Sidebar from './Sidebar';
 import Footer from './Footer';
 import { fetchCoinStats } from './service/fetchData'
 
-
 const useStyles = makeStyles((theme) => ({
   appContainer: {
     background: '#fff'
