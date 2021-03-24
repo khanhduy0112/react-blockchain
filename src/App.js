@@ -6,7 +6,9 @@ import { makeStyles } from '@material-ui/core';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
 import { fetchCoinStats } from './service/fetchData'
-
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import MainPage from './MainPage';
+import CoinDetail from './component/CoinDetail';
 const useStyles = makeStyles((theme) => ({
   appContainer: {
     background: '#fff'
@@ -46,15 +48,22 @@ function App() {
 
   }, [])
   return (
-    <div className={classes.appContainer}>
-      <h1>Test</h1>
-      <CustomAppBar setLanguage={setLanguage} />
-      <main className={classes.root}>
-        <MainSection language={language} coins={coins} coinNames={coinNames} isLoading={isLoading} className={classes.mainSection} />
-        <Sidebar coins={coins} coinNames={coinNames} isLoading={isLoading} className={classes.sideBar} />
-      </main>
-      <Footer />
-    </div >
+    // <div className={classes.appContainer}>
+    //   <CustomAppBar setLanguage={setLanguage} />
+    //   <main className={classes.root}>
+    //     <MainSection language={language} coins={coins} coinNames={coinNames} isLoading={isLoading} className={classes.mainSection} />
+    //     <Sidebar coins={coins} coinNames={coinNames} isLoading={isLoading} className={classes.sideBar} />
+    //   </main>
+    //   <Footer />
+
+    // </div >
+    <BrowserRouter basename="/react-blockchain">
+      <Switch>
+        <Route exact path="/" component={MainPage} />
+        <Route path="/coins/:coinName" component={CoinDetail} />
+      </Switch>
+    </BrowserRouter>
+
 
   )
 }
